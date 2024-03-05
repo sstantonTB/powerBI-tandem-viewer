@@ -58,7 +58,7 @@ export class Visual implements IVisual {
     }
 
     private async getAccessToken(): Promise<string> {
-        const endpoint = 'https://f2iv2mhpbebrhrkfsnn2lvloxq0janqb.lambda-url.us-west-2.on.aws';
+        const endpoint = 'https://63ca1c6d-2123-4634-a07c-c0fd8e992b78-00-guefdwwmz5ay.janeway.replit.dev';
         const token = await (await fetch(endpoint)).text();
         return token;
     }
@@ -114,7 +114,7 @@ class tandemViewer {
                 });
                 this.viewer.start();
                 av.endpoint.HTTP_REQUEST_HEADERS['Authorization'] = `Bearer ${_access_token}`;
-                this.app = new av.Private.DtApp({});
+                this.app = new av.Private.DtApp();
                 this.viewer.setGhosting(false);
                 resolve(this);
             });
